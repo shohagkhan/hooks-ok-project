@@ -1,13 +1,13 @@
 import React, {useState, useContext} from 'react'
-import { BookContext } from './../context/BookContextProvider';
+import { BookContext } from './../context/BookContext';
 
 export const BookForm = () => {
-    const {addBook} = useContext(BookContext)
+    const {dispatch} = useContext(BookContext)
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
     const submitHandler = (e) => {
         e.preventDefault()
-        addBook(title, author)
+        dispatch({type: 'addBook', book: {title: title, author: author}})
         setTitle('')
         setAuthor('')
     }

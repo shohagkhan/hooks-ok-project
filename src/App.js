@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BookContextProvider } from './context/BookContextProvider';
+import { BookContextProvider } from './context/BookContext';
 import { Navbar } from './components/Navbar';
 import { BookList } from './components/BookList';
 import { BookForm } from './components/BookForm';
